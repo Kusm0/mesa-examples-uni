@@ -1,6 +1,5 @@
 import mesa
 
-
 class Resource(mesa.Agent):
     """
     Resource:
@@ -9,8 +8,8 @@ class Resource(mesa.Agent):
     - grows 1 amount of spice at each turn
     """
 
-    def __init__(self, model, max_sugar, max_spice):
-        super().__init__(model)
+    def __init__(self, unique_id, model, max_sugar, max_spice):
+        super().__init__(unique_id, model)  # Pass both unique_id and model
         self.sugar_amount = max_sugar
         self.max_sugar = max_sugar
         self.spice_amount = max_spice
